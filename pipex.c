@@ -5,16 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adesmet <adesmet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 14:05:47 by adesmet           #+#    #+#             */
+/*   Created: 2022/04/14 13:32:09 by adesmet           #+#    #+#             */
 /*   Updated: 2022/04/26 10:56:36 by adesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    pipex(int f1, int f2)
-{
-    int end[];
-    pid_t parent;
-
-    pipe(end);
-    parent = fork();
-}
