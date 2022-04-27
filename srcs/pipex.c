@@ -6,7 +6,7 @@
 /*   By: adesmet <adesmet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:05:47 by adesmet           #+#    #+#             */
-/*   Updated: 2022/04/27 16:01:28 by adesmet          ###   ########.fr       */
+/*   Updated: 2022/04/27 16:28:55 by adesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,8 @@ int	main(int argc, char **argv, char **envp)
 			parent_process(argv, envp, fd);
 	}
 	else
+	{
 		ft_putstr_fd("Please enter 4 arguments exactly", 2);
+		error();
+	}
 }
