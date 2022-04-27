@@ -6,7 +6,7 @@
 /*   By: adesmet <adesmet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 12:18:22 by adesmet           #+#    #+#             */
-/*   Updated: 2022/04/27 12:49:38 by adesmet          ###   ########.fr       */
+/*   Updated: 2022/04/27 15:54:03 by adesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char *s, char c)
 		ans[k] = ft_substr(s, i, ft_word_size(s, c, i));
 		if (!ans)
 		{
-			//ft_free(ans, k);
+			ft_free(ans, k);
 			return (NULL);
 		}
 		i += ft_word_size(s, c, i);

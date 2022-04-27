@@ -6,7 +6,7 @@
 /*   By: adesmet <adesmet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 12:19:27 by adesmet           #+#    #+#             */
-/*   Updated: 2022/04/27 12:20:04 by adesmet          ###   ########.fr       */
+/*   Updated: 2022/04/27 15:54:29 by adesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	*ft_memcpy(void *dest, void *src, size_t len)
 		ptr[len] = ptr2[len];
 	return (dest);
 }
-
 
 char	*ft_strjoin(char *s1, char *s2)
 {
