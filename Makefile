@@ -3,42 +3,34 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
+#    By: adesmet <adesmet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 15:41:46 by user42            #+#    #+#              #
-#    Updated: 2022/04/26 17:20:30 by user42           ###   ########.fr        #
+#    Updated: 2022/04/27 12:22:16 by adesmet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME	= pipex
 
-SRC		= srcs/pipex.c srcs/utils.c
+SRC		= srcs/pipex.c srcs/utils.c srcs/notLibft.c srcs/notLibft2.c srcs/notLibft3.c
 OBJS	= ${SRC:.c=.o}
-LIBFT	= libft/libft.a
-HEADERS = libft/libft.h includes/pipex.h
+HEADERS = includes/pipex.h
 CC		= gcc
 CFLAG	= -Wall -Wextra -Werror
 
-
-
 all: ${NAME}
 
-${NAME}:	${LIBFT} ${OBJS}
-			$(CC) $(CFLAGS) -o ${NAME} ${OBJS} ${LIBFT}
+${NAME}:    ${OBJS}
+			$(CC) $(CFLAGS) -o ${NAME} ${OBJS}
 
 %.o : %.c $(HEADERS) 
 	$(CC) $(CFLAGS) -I./includes -o $@ -c $<
 
-$(LIBFT):
-	$(MAKE) -C libft
-
 clean:
-	$(MAKE) clean -C libft
 	rm -f ${OBJS}
 
 fclean: clean
-	rm -f $(LIBFT)
 	rm -f ${NAME}
 
 re: fclean all
